@@ -46,7 +46,7 @@ hr{
 
 .text1{
    position: relative;
-   left: 120px;
+   left: 130px;
   text-align: left;
   font-family: "Kanit", sans-serif;
     
@@ -62,14 +62,14 @@ hr{
 }
 .text3{
     position: relative;
-    left: 40px;
+    left: 20px;
     text-align: left;
     font-family: "Kanit", sans-serif;
    
 }
    .text4{
    position: relative;
-   right: 10px;
+   right: 40px;
    text-align: left;
    font-family: "Kanit", sans-serif;
    
@@ -182,7 +182,5 @@ hr{
   height: auto; /* ให้ภาพปรับความสูงตามความกว้างเพื่อไม่ให้ภาพบิดเบี้ยว */
   margin: 0 auto; /* จัดกึ่งกลางภาพ */
 }
-
-
 
 

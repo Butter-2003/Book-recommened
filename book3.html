@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>แนะนำหนังสือ "ชีวิตดีดีที่ลงตัว"</title>
 	<meta name="keywords" content="ชีวิตดีดีที่ลงตัว LIFE IS BETTER,สะอาด,การ์ตูนแก๊กสะท้อนสังคม,หนังสือการ์ตูนไทย ,หนังสือสะท้อนสังคม,ชีวิตประจำวัน">
-	<meta name="descrotion" content="“ชีวิตดีดีที่ลงตัว LIFE IS BETTER” เป็นหนังสือที่เขียนโดย สะอาด ซึ่งเป็นผลงานที่ได้รับความนิยมอย่างมากในวงการวรรณกรรมไทย หนังสือเล่มนี้รวบรวมการ์ตูนแก๊กสะท้อนสังคมที่ผู้เขียนได้หยิบเหตุการณ์ในชีวิตประจำวันมาเสียดสีอย่างแสบสัน ชวนให้ผู้อ่านนึกถึงชีวิต หน้าที่การงาน สิ่งแวดล้อม การเดินทาง และกิจวัตรประจำวันในสังคมเมืองที่ก่อให้เกิดคำถามว่าทุกวันนี้ “ชีวิตดีๆ ที่ลงตัว” แล้วหรือยัง">
+	<meta name="description" content="“ชีวิตดีดีที่ลงตัว LIFE IS BETTER” เป็นหนังสือที่เขียนโดย สะอาด ซึ่งเป็นผลงานที่ได้รับความนิยมอย่างมากในวงการวรรณกรรมไทย หนังสือเล่มนี้รวบรวมการ์ตูนแก๊กสะท้อนสังคมที่ผู้เขียนได้หยิบเหตุการณ์ในชีวิตประจำวันมาเสียดสีอย่างแสบสัน ชวนให้ผู้อ่านนึกถึงชีวิต หน้าที่การงาน สิ่งแวดล้อม การเดินทาง และกิจวัตรประจำวันในสังคมเมืองที่ก่อให้เกิดคำถามว่าทุกวันนี้ “ชีวิตดีๆ ที่ลงตัว” แล้วหรือยัง">
 	
 	
 	
@@ -138,8 +138,53 @@
 				<h6>หมวดหมู่ : วรรณกรรม, เรื่องสั้น</h6>
 					<br>
 				<h4>ตัวอย่าง</h4>
-				<img src="images/ชีวิตดีดีที่ลงตัว1.jpg" alt="" class="img-fluid p-2" width="150">
-				<img src="images/ชีวิตดีดีที่ลงตัว2.jpg	" alt="" class="img-fluid p-2" width="150" >
+					<!-- Image 1 -->
+					<img id="myImg" src="images/ชีวิตดีดีที่ลงตัว1.jpg"style="width:100%;max-width:150px"class="img-fluid p-3">
+					<!-- Image 2 -->
+					<img id="myImg2" src="images/ชีวิตดีดีที่ลงตัว2.jpg"style="width:100%;max-width:150px"class="img-fluid p-3">
+	
+					<!-- The Modal -->
+					<div id="myModal" class="modal1">
+					<span class="close">&times;</span>
+					<img class="modal-content" id="img01">
+					<div id="caption"></div>
+					</div>
+	
+					<script>
+					// Get the modal
+					var modal = document.getElementById("myModal");
+	
+					// Get the modal image and caption
+					var modalImg = document.getElementById("img01");
+					var captionText = document.getElementById("caption");
+	
+					// Get the images
+					var img1 = document.getElementById("myImg");
+					var img2 = document.getElementById("myImg2");
+	
+					// Function to open modal with image
+					function openModal(image) {
+					modal.style.display = "block";
+					modalImg.src = image.src;
+					captionText.innerHTML = image.alt;
+					}
+	
+					// Open modal when clicking on image 1
+					img1.onclick = function() {
+					openModal(this);
+					}
+	
+					// Open modal when clicking on image 2
+					img2.onclick = function() {
+					openModal(this);
+					}
+	
+					// Close the modal when clicking on the close button
+					var span = document.getElementsByClassName("close")[0];
+					span.onclick = function() {
+					modal.style.display = "none";
+					}
+					</script>
 		
 			</div>
 		</div>	
