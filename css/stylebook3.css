@@ -201,14 +201,14 @@ form textarea{
   }
 
   /* แก้รูปเวลาขยาย */
-  .modal-content {
+  .modal1-content {
   margin: auto;
   display: block;
   width: 30%;
   max-width: 700px;
   }
   /* Add Animation */
-  .modal-content, #caption {  
+  .modal1-content, #caption {  
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -245,7 +245,8 @@ form textarea{
 
   /* 100% Image Width on Smaller Screens */
   @media only screen and (max-width: 700px){
-  .modal-content {
+  .modal1-content {
     width: 100%;
   }
   }
+      
