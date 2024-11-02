@@ -18,6 +18,16 @@ background-color: #3c2211;
 .user{
   text-align: right;
 }
+.titlebook{
+  position: relative;
+  left: 100px;
+}
+@media (max-width: 576px) {
+  .titlebook {
+      position: static;
+      margin: 0 auto;
+  }
+}
 .zoom{
   width: 200px;
   cursor: pointer;
@@ -26,6 +36,7 @@ background-color: #3c2211;
   transform: scale(1.3);
 }
 .topnav {
+  
   overflow: hidden;
   background-color: #b85d27;
   font-family: "Kanit", system-ui;
@@ -75,49 +86,66 @@ background-color: #3c2211;
       outline: none;
 }
 
-.topnav .search-container button {
+.topnav .search-container {
   float: right;
+  border: 4px solid;
+  border-color: #f6f5f3;
+  border-radius: 50px;
+  margin-top: 3px;
+  width: 300px; /* สามารถปรับตามต้องการ */
+  height: 50px; /* สามารถปรับตามต้องการ */
+  background-color: #f6f5f3;
+  display: flex; /* ใช้ flexbox */
+  align-items: center; /* จัดแนวในแนวตั้ง */
+}
+
+.topnav input[type=text] {
+  border: none;
+  padding: 10px;
+  margin-top: 3px;
+  font-size: 16px;
+  background-color: #f6f5f3;
+  width: 200px; /* ความกว้างเมื่ออยู่ในหน้าจอใหญ่ */
+  height: 38px;
+  background: transparent;
+  border-radius: 50px;
+  flex-grow: 1; /* ทำให้ input ยืดเต็มที่เมื่อหน้าจอเล็ก */
+}
+
+.topnav .search-container button {
   padding: 6px 10px;
   margin-top: 5px;
-  margin-right: 16px;
   background: #f6f5f3;
   border: none;
   height: 30px;
   font-weight: bolder;
   cursor: pointer;
-}
-
-.topnav .search-container button:hover {
-  background: #b85d27;
-  border-radius:50px;
+  border-radius: 50px; /* รัศมีปุ่ม */
 }
 
 @media screen and (max-width: 600px) {
   .topnav .search-container {
-    float: none;
+      float: none;
+      width: 100%; /* เปลี่ยนให้กว้างเต็ม */
   }
-  .topnav a, .topnav input[type=text], .topnav .search-container button {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
+
   .topnav input[type=text] {
-    border: 1px solid #f6f5f3;  
+      width: 100%; /* ให้ความกว้างเต็ม */
+      border: 1px solid #f6f5f3;  
+  }
+
+  .topnav .search-container button {
+      width: auto; /* ปรับให้มีขนาดตามเนื้อหา */
+      margin-left: 10px; /* เพิ่ม margin ให้ปุ่ม */
   }
 }
+
 .last{
   background-color: #3c2211;
   position: relative;
   right: 0px;
 }
 
-.titlebook{
-  position: relative;
-  left: 100px;
-}
 .review{
   width: 400px;
   border-radius: 20px;
@@ -148,29 +176,39 @@ input:checked~ label{
 }
 .btn-primary {
   height: 100%;
-  width: 1200px;
+  width: 100%; /* ให้ปุ่มเต็มหน้าจอ */
+  max-width: 1200px; /* ขนาดสูงสุดของปุ่ม */
   outline: none;
   font-size: 17px;
   font-weight: 500;
   text-transform: uppercase;
   cursor: pointer;
-  position: relative;left: 20px;
   border-radius: 50px;
   background-color: #3c2211;
   color: #f6f5f3;
+  margin: 0 auto; /* จัดปุ่มให้อยู่ตรงกลาง */
+  margin-bottom: 20px;
 }
-.btn-primary:hover{
+.btn-primary:hover {
   background: #b85d27;
   color: #f6f5f3;
 }
-form textarea{
-  width: 1200px;
+
+form textarea {
+  width: 100%; /* ให้ textarea ขยายตามขนาดหน้าจอโดยเริ่มต้น */
   height: 150px;
   padding: 15px 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border-radius: 5px;
-  border: 1px solid  #3c2211;
-  position: relative;left: 20px;
+  border: 1px solid #3c2211;
+  margin: 0 auto; /* จัด textarea ให้อยู่ตรงกลาง */
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  .btn-primary, form textarea {
+    width: 1200px; /* ขนาดคงที่เมื่ออยู่บนหน้าจอใหญ่ */
+  }
 }
 #myImg, #myImg2 {
   border-radius: 5px;
